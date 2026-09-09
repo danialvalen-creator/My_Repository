@@ -91,7 +91,7 @@ class Calculator:
 def main():
     calculator = Calculator()
     calculator.run()
-    print("\nСпасибо большое.")
+    print("\nСпасибо большое .")
 
 if __name__ == "__main__":
     main()
