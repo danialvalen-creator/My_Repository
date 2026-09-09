@@ -34,11 +34,10 @@ class Calculator:
     def evaluate_expression(self):
         """Вычисление выражения"""
         try:
-            # Заменяем символы для корректного вычисления
+            
             expr = self.expression.replace('√', 'math.sqrt')
             result = eval(expr)
             
-            # Округляем до 10 знаков
             if isinstance(result, float):
                 result = round(result, 10)
                 if result == int(result):
@@ -77,7 +76,6 @@ class Calculator:
                     self.expression = '-' + self.expression
         
         else:
-            # Добавляем символ в выражение
             self.expression += user_input
     
     def run(self):
@@ -85,7 +83,6 @@ class Calculator:
         while self.running:
             self.display_menu()
             
-            # Получаем ввод от пользователя
             user_input = input("> ").strip()
             
             if user_input:
